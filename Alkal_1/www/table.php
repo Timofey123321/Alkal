@@ -1,3 +1,7 @@
+<?php
+	$cols = rand(1,10);
+	$rows =rand(1,10);
+	?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,6 +20,18 @@
 		<div id="content">
 			<!-- Заголовок -->
 			<h1>Таблица умножения</h1>
+			<?php
+    			echo "<table border='1'>\n";
+    			for($r=1;$r<=$rows;$r++){
+        			echo "<tr>\n";
+        			for($c=1; $c<=$cols; $c++){
+            			if($r==1 || $c==1){echo "\t\t<th style='background:red'>".$r*$c."</th>\n";}
+            			else{echo "\t\t<td>".$r*$c."</td>\n";}
+        }
+        echo "</tr>";
+    }
+    echo "</table>";
+    ?>
 			<!-- Заголовок -->
 			<!-- Область основного контента -->
 			<!-- Таблица -->
